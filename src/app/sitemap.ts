@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { products } from "@/data/products";
 import { storeInfo } from "@/data/storeInfo";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${storeInfo.domain}`;
 
