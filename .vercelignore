@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+.next
+.git
+Z121_CaMau_Antigravity_MediaKit*
+"sản phẩm thật"
+sản phẩm thật/
+*.bat
+proxy.js
+public/*.png
+public/screenshot*.png
+public/test*.png
