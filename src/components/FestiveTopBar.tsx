@@ -17,10 +17,10 @@ export function FestiveTopBar() {
           </span>
           <span className="text-amber-400/50">•</span>
           <span className="hidden sm:inline text-amber-100 font-medium">
-            Điểm Bán Pháo Hoa Z121 Cà Mau — Pháo Hoa Chú Bộ Đội (Bộ Quốc Phòng)
+            Điểm Bán Pháo Hoa Z121 Cà Mau — Pháo Hoa <span className="text-emerald-400 font-bold">Chú Bộ Đội</span> (Bộ Quốc Phòng)
           </span>
           <span className="sm:hidden text-amber-100 font-medium truncate max-w-[200px]">
-            Điểm Bán Z121 Cà Mau • Chú Bộ Đội
+            Điểm Bán Z121 Cà Mau • <span className="text-emerald-400 font-bold">Chú Bộ Đội</span>
           </span>
         </div>
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { ProductCategory } from "@/types";
+import { CuteSoldierBadge } from "@/components/CuteSoldierBadge";
 import {
   ShieldCheck,
   QrCode,
@@ -16,6 +17,8 @@ import {
   Waves,
   Wand2,
   Disc,
+  MapPin,
+  CheckCircle2,
 } from "lucide-react";
 
 interface HeroSectionProps {
@@ -109,40 +112,70 @@ export function HeroSection({ onOpenFeaturedVideo }: HeroSectionProps) {
           </div>
         </div>
 
-        {/* Center Headline & Calligraphy Badge Overlay (Positioned in Sky) */}
-        <div className="absolute top-6 sm:top-8 md:top-10 lg:top-12 inset-x-0 z-20 flex flex-col items-center text-center px-4 pointer-events-none">
-          {/* Line 1: Brand Header Tag - NỔI BẬT RỰC RỠ */}
-          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-1 sm:py-1.5 rounded-full bg-gradient-to-r from-red-950/80 via-black/85 to-red-950/80 border border-[#FDE047]/80 shadow-[0_0_25px_rgba(253,224,71,0.55)] backdrop-blur-md mb-1 sm:mb-1.5 transition-all">
-            <span className="text-[#FDE047] text-xs sm:text-sm animate-pulse">★</span>
-            <span className="font-sans font-black text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.22em] sm:tracking-[0.28em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] via-[#FDE047] to-[#FBBF24] drop-shadow-[0_2px_10px_rgba(0,0,0,1)]">
-              PHÁO HOA CHÚ BỘ ĐỘI CÀ MAU
-            </span>
+        {/* Center Headline & Military Badge Overlay (Positioned in Sky) */}
+        <div className="absolute top-4 sm:top-6 md:top-8 lg:top-9 inset-x-0 z-20 flex flex-col items-center text-center px-4 pointer-events-none">
+          {/* Line 1: Brand Header Tag với Icon Chú Bộ Đội Chibi Dễ Thương & Chữ "CHÚ BỘ ĐỘI" màu xanh */}
+          <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-6 py-1 sm:py-1.5 rounded-full bg-black/85 border-2 border-[#FDE047] shadow-[0_0_30px_rgba(253,224,71,0.65)] backdrop-blur-md mb-1 sm:mb-1.5 transition-all">
+            <CuteSoldierBadge size={36} withSalute={true} />
+            <div className="flex items-center gap-1.5 font-sans font-black text-xs sm:text-sm md:text-base lg:text-lg tracking-wider uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,1)]">
+              <span className="text-white">PHÁO HOA</span>
+              <span className="text-[#4ADE80] drop-shadow-[0_0_14px_rgba(74,222,128,0.95)] [text-shadow:_0_0_14px_#22c55e]">
+                CHÚ BỘ ĐỘI
+              </span>
+              <span className="text-[#FDE047]">CÀ MAU</span>
+            </div>
             <span className="text-[#FDE047] text-xs sm:text-sm animate-pulse">★</span>
           </div>
 
-          {/* Line 2: Large Golden Calligraphy "Pháo hoa Z121" */}
-          <h1 className="font-script font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFFBEB] via-[#FDE047] via-50% to-[#F59E0B] drop-shadow-[0_4px_28px_rgba(245,158,11,0.9)] my-0.5 sm:my-1 leading-none select-none">
-            Pháo hoa Z121
+          {/* Line 2: Chữ "PHÁO HOA Z121" Đẳng Cấp, Hoàng Gia, Sáng Rực 24K, Vừa Vặn Tuyệt Đối */}
+          <h1 className="font-sans font-black tracking-tight sm:tracking-normal uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#FFF3B0] via-30% to-[#FBBF24] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)] drop-shadow-[0_0_25px_rgba(253,224,71,0.6)] my-1 sm:my-1.5 leading-none select-none flex items-center justify-center gap-2 sm:gap-3">
+            <span>PHÁO HOA</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#FDE047] to-[#F59E0B] drop-shadow-[0_0_20px_rgba(253,224,71,0.8)]">
+              Z121
+            </span>
           </h1>
 
-          {/* Line 3: Slogan in white */}
-          <span className="font-sans font-extrabold text-[10px] sm:text-xs md:text-sm lg:text-base tracking-[0.2em] text-white uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-            CHÍNH HÃNG – AN TOÀN – HỢP PHÁP
-          </span>
+          {/* Line 3: Slogan sang trọng có hoa thị vàng */}
+          <div className="flex items-center gap-2 sm:gap-3 font-sans font-black text-[11px] sm:text-xs md:text-sm lg:text-base tracking-[0.25em] text-[#FEF3C7] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-0.5 sm:mt-1">
+            <span>CHÍNH HÃNG</span>
+            <span className="text-[#FDE047] animate-pulse">✦</span>
+            <span>AN TOÀN</span>
+            <span className="text-[#FDE047] animate-pulse">✦</span>
+            <span>HỢP PHÁP</span>
+          </div>
 
-          {/* Line 4: Red Ribbon Badge "ĐIỂM BÁN TẠI CÀ MAU" */}
+          {/* Line 4: Red Ribbon Badge "ĐIỂM BÁN TẠI CÀ MAU" với icon MapPin */}
           <div className="mt-2 lg:mt-3 inline-flex items-center justify-center">
-            <div className="relative px-6 sm:px-8 py-1 rounded-full bg-gradient-to-r from-[#B91C1C] via-[#DC2626] to-[#B91C1C] border-2 border-[#FDE047] shadow-[0_4px_20px_rgba(220,38,38,0.7)]">
-              <span className="font-sans font-black text-xs sm:text-sm md:text-base text-white uppercase tracking-wider [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
+            <div className="relative inline-flex items-center gap-2 px-6 sm:px-8 py-1 sm:py-1.5 rounded-full bg-gradient-to-r from-[#991B1B] via-[#DC2626] to-[#991B1B] border-2 border-[#FDE047] shadow-[0_4px_25px_rgba(220,38,38,0.75)]">
+              <MapPin className="h-4 w-4 text-[#FDE047] shrink-0" />
+              <span className="font-sans font-black text-xs sm:text-sm md:text-base text-white uppercase tracking-wider [text-shadow:0_1px_4px_rgba(0,0,0,0.9)]">
                 ĐIỂM BÁN TẠI CÀ MAU
               </span>
             </div>
           </div>
         </div>
 
+        {/* Cute Soldier Floating Mascot Sticker (Desktop Bottom-Left) */}
+        <div className="hidden xl:flex absolute bottom-6 left-6 z-20 items-center gap-3 p-2.5 pr-4 rounded-2xl bg-black/85 backdrop-blur-md border border-[#22C55E]/60 shadow-[0_0_25px_rgba(34,197,94,0.35)] pointer-events-auto">
+          <CuteSoldierBadge size={52} withSalute={true} />
+          <div className="flex flex-col text-left">
+            <div className="flex items-center gap-1.5 text-[#22C55E] font-black text-xs uppercase tracking-wider">
+              <span>Chú Bộ Đội Cà Mau</span>
+              <span className="text-amber-400">★</span>
+            </div>
+            <span className="text-white text-[11px] font-medium">Tư vấn tận tâm • 100% Chính hãng</span>
+            <a
+              href="tel:0917335233"
+              className="text-amber-300 hover:text-white font-mono font-bold text-xs mt-0.5 transition-colors flex items-center gap-1"
+            >
+              <span>Hotline/Zalo: 0917.335.233</span>
+            </a>
+          </div>
+        </div>
+
         {/* Right Glass Card (Desktop only, 4 Trust Points matching mockup) */}
-        <div className="hidden lg:block absolute top-8 lg:top-12 right-6 xl:right-12 z-20 pointer-events-auto">
-          <div className="w-56 xl:w-64 rounded-2xl bg-[#070D18]/85 backdrop-blur-md border border-[#FDE047]/50 p-4 shadow-[0_15px_40px_rgba(0,0,0,0.85)] space-y-3">
+        <div className="hidden lg:block absolute top-6 lg:top-10 right-3 xl:right-6 z-20 pointer-events-auto">
+          <div className="w-52 xl:w-56 rounded-2xl bg-[#070D18]/90 backdrop-blur-md border border-[#FDE047]/50 p-3.5 shadow-[0_15px_40px_rgba(0,0,0,0.85)] space-y-2.5">
             
             {/* Item 1 */}
             <div className="flex items-center gap-3">
@@ -216,26 +249,39 @@ export function HeroSection({ onOpenFeaturedVideo }: HeroSectionProps) {
         </div>
 
         {/* Mobile Heading Overlay (Centered in Sky) */}
-        <div className="absolute top-2 inset-x-0 z-20 flex flex-col items-center text-center px-2 pointer-events-none">
-          {/* Mobile Brand Tag Nổi Bật */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-black/70 border border-[#FDE047]/80 shadow-[0_0_12px_rgba(253,224,71,0.55)] backdrop-blur-xs mb-0.5">
-            <span className="text-[#FDE047] text-[8px] animate-pulse">★</span>
-            <span className="font-sans font-black text-[9px] tracking-[0.16em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FDE047] to-[#F59E0B] drop-shadow-[0_1px_3px_rgba(0,0,0,1)]">
-              PHÁO HOA CHÚ BỘ ĐỘI CÀ MAU
-            </span>
+        <div className="absolute top-1.5 inset-x-0 z-20 flex flex-col items-center text-center px-2 pointer-events-none">
+          {/* Mobile Brand Tag với Icon Chú Bộ Đội Chibi & Chữ "CHÚ BỘ ĐỘI" xanh */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-black/85 border border-[#FDE047] shadow-[0_0_14px_rgba(253,224,71,0.6)] backdrop-blur-xs mb-0.5">
+            <CuteSoldierBadge size={24} withSalute={true} />
+            <div className="flex items-center gap-1 font-sans font-black text-[9.5px] tracking-wide uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,1)]">
+              <span className="text-white">PHÁO HOA</span>
+              <span className="text-[#4ADE80] drop-shadow-[0_0_8px_rgba(74,222,128,0.95)]">
+                CHÚ BỘ ĐỘI
+              </span>
+              <span className="text-[#FDE047]">CÀ MAU</span>
+            </div>
             <span className="text-[#FDE047] text-[8px] animate-pulse">★</span>
           </div>
 
-          <h1 className="font-script font-bold text-3xl tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFFBEB] via-[#FDE047] to-[#F59E0B] drop-shadow-[0_2px_8px_rgba(245,158,11,0.9)] my-0 leading-tight">
-            Pháo hoa Z121
+          {/* Mobile Main Title: PHÁO HOA Z121 Đẳng Cấp Hoàng Gia */}
+          <h1 className="font-sans font-black tracking-tight uppercase text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#FFF3B0] via-30% to-[#FBBF24] drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] drop-shadow-[0_0_15px_rgba(253,224,71,0.5)] my-0.5 leading-none select-none flex items-center justify-center gap-1.5">
+            <span>PHÁO HOA</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#FDE047] to-[#F59E0B] drop-shadow-[0_0_12px_rgba(253,224,71,0.8)]">
+              Z121
+            </span>
           </h1>
 
-          <span className="font-sans font-black text-[7.5px] tracking-wider text-white uppercase mt-0.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
-            CHÍNH HÃNG – AN TOÀN – HỢP PHÁP
-          </span>
+          <div className="flex items-center gap-1 font-sans font-black text-[7.5px] tracking-widest text-[#FEF3C7] uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] mt-0.5">
+            <span>CHÍNH HÃNG</span>
+            <span className="text-[#FDE047]">✦</span>
+            <span>AN TOÀN</span>
+            <span className="text-[#FDE047]">✦</span>
+            <span>HỢP PHÁP</span>
+          </div>
 
           <div className="mt-1 inline-flex items-center justify-center">
-            <div className="px-3 py-0.5 rounded-full bg-gradient-to-r from-[#B91C1C] via-[#DC2626] to-[#B91C1C] border border-[#FDE047] shadow-sm">
+            <div className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#991B1B] via-[#DC2626] to-[#991B1B] border border-[#FDE047] shadow-sm">
+              <MapPin className="h-2.5 w-2.5 text-[#FDE047]" />
               <span className="font-sans font-black text-[8px] text-white uppercase tracking-wider">
                 ĐIỂM BÁN TẠI CÀ MAU
               </span>

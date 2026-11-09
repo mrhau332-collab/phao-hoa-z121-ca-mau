@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { storeInfo } from "@/data/storeInfo";
+import { CuteSoldierBadge } from "@/components/CuteSoldierBadge";
 import {
   ShieldCheck,
   Star,
@@ -67,14 +68,20 @@ export function Navbar() {
 
             <div className="h-7 w-[1px] bg-white/20 hidden sm:block" />
 
-            {/* Brand Title - Nổi bật uy tín */}
+            {/* Cute Soldier Sticker */}
+            <CuteSoldierBadge size={32} className="hidden sm:inline-flex" />
+
+            {/* Brand Title - Nổi bật uy tín với chữ "chú Bộ đội" màu xanh */}
             <div className="flex flex-col">
               <span className="text-[10px] text-white/90 font-bold sm:hidden leading-none">
                 Pháo hoa
               </span>
               <div className="flex items-center gap-1.5 font-sans text-xs sm:text-base lg:text-lg font-black tracking-tight leading-tight">
                 <span className="text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
-                  <span className="hidden sm:inline">Pháo hoa </span>chú Bộ đội
+                  <span className="hidden sm:inline">Pháo hoa </span>
+                  <span className="text-[#22C55E] drop-shadow-[0_0_8px_rgba(34,197,94,0.7)] font-black">
+                    chú Bộ đội
+                  </span>
                 </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDE047] via-[#FBBF24] to-[#F59E0B] font-black drop-shadow-[0_2px_8px_rgba(245,158,11,0.6)]">
                   Cà Mau
