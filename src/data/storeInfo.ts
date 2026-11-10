@@ -12,7 +12,7 @@ export const storeInfo: StoreProfile = {
   serviceArea: process.env.NEXT_PUBLIC_SERVICE_AREA || "TP. Cà Mau và các huyện: Đầm Dơi, Cái Nước, Thới Bình, Trần Văn Thời, U Minh, Năm Căn, Ngọc Hiển, Phú Tân",
   workingHours: "07:00 - 22:00 (Mở cửa phục vụ bà con tất cả các ngày trong tuần & cao điểm dịp Tết)",
   email: process.env.NEXT_PUBLIC_STORE_EMAIL || "phaohoacamau.bqp@gmail.com",
-  domain: process.env.NEXT_PUBLIC_DOMAIN || "phaohoacamau.vn",
+  domain: process.env.NEXT_PUBLIC_DOMAIN || "phaohoachubodoicamau.web.app",
   isAuthorizedAgent: true,
   authorizationInfo: "Điểm bán pháo hoa Z121 chính hãng tại Cà Mau do Chú Bộ Đội trực tiếp phụ trách tư vấn. Cam kết 100% pháo hoa hợp pháp theo Nghị định 137/2020/NĐ-CP, có tem QR chống giả và hóa đơn rõ ràng.",
   legalDisclaimer:

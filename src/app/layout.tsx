@@ -49,6 +49,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${storeInfo.domain}`),
   title: {
     default: `${storeInfo.storeName} — Điểm Bán Pháo Hoa Z121 Cà Mau`,
     template: `%s | ${storeInfo.storeName}`,

@@ -2,6 +2,10 @@
 node_modules
 .next
 .git
+.firebase
+.netlify
+firebase.json
+.firebaserc
 Z121_CaMau_Antigravity_MediaKit*
 "sản phẩm thật"
 sản phẩm thật/

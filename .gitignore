@@ -27,6 +27,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+.firebase
+.netlify
 
 # typescript
 *.tsbuildinfo
@@ -41,3 +43,6 @@ proxy.js
 public/*.png
 public/screenshot*.png
 public/test*.png
+
+.vercel
+.env*
